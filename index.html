@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Budget Calculator</title>
+
+    <!--bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Budget Calculator</h1>
+
+    <form class="mx-auto">
+      <div class="form-group">
+        <label for="budget">Gross yearly salary/income</label>
+        <input type="currency" class="form-control" id="grossIncome" aria-describedby="emailHelp" placeholder="Enter gross Income">
+        <small id="income" class="form-text text-muted">Enter your gross yearly salary/income as a number with no commas.</small>
+      </div>
+      <div class="form-group">
+        <label for="budget">Tax Rate</label>
+        <input type="number" step="0.01" class="form-control" id="taxRate" aria-describedby="emailHelp" placeholder="Income tax rate">
+        <small id="income" class="form-text text-muted">Enter your income tax rate.</small>
+      </div>
+      <div class="form-group">
+        <label for="budget">Monthly Housing Costs</label>
+        <input type="currency" class="form-control" id="housingCosts" aria-describedby="emailHelp" placeholder="Monthly Housing Cost">
+        <small id="income" class="form-text text-muted">Enter your monthly rent/mortgage.</small>
+      </div>
+      <div class="form-group">
+        <label for="budget">Monthly Food Costs</label>
+        <input type="currency" class="form-control" id="foodCosts" aria-describedby="emailHelp" placeholder="Monthly Food Costs">
+        <small id="income" class="form-text text-muted">Enter your monthly food costs, including meals out.</small>
+      </div>
+      <div class="form-group">
+        <label for="budget">Monthly Car Payment</label>
+        <input type="currency" class="form-control" id="carCosts" aria-describedby="emailHelp" placeholder="Monthly Food Costs">
+        <small id="income" class="form-text text-muted">Enter your monthly car payment.</small>
+      </div>
+      <button type="button" class="btn btn-primary" id="calc">Calculate</button>
+    </form>
+
+    <div class="total border mx-auto">
+      <h3>Totals</h3>
+      <h5>Your net monthly income is: </h5>
+      <p id="netIncome"></p>
+      <h5>Your expenses are: </h5>
+      <p id="expenses"></p>
+      <h5>Your monthly spending money is:</h5>
+      <p id="spendingMoney"></p>
+    </div>
+
+    <!--JS for Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--JS for calculator-->
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
