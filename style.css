@@ -10,4 +10,9 @@ form {
 .total{
   width: 50%;
   margin-top: 40px;
+  padding: 10px;
+}
+
+.warningText {
+  color: red;
 }

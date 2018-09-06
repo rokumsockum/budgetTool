@@ -16,31 +16,37 @@
         <label for="budget">Gross yearly salary/income</label>
         <input type="currency" class="form-control" id="grossIncome" aria-describedby="emailHelp" placeholder="Enter gross Income">
         <small id="income" class="form-text text-muted">Enter your gross yearly salary/income as a number with no commas.</small>
+        <p id="incomeWarning" class="warningText"></p>
       </div>
       <div class="form-group">
         <label for="budget">Tax Rate</label>
-        <input type="number" step="0.01" class="form-control" id="taxRate" aria-describedby="emailHelp" placeholder="Income tax rate">
-        <small id="income" class="form-text text-muted">Enter your income tax rate.</small>
+        <input type="number" step="1" class="form-control" id="taxRate" aria-describedby="emailHelp" placeholder="Income tax rate">
+        <small id="income" class="form-text text-muted">Enter your income tax rate as a whole number, i.e. 22 for 22%.</small>
+        <p id="taxWarning" class="warningText"></p>
       </div>
       <div class="form-group">
         <label for="budget">Monthly Housing Costs</label>
         <input type="currency" class="form-control" id="housingCosts" aria-describedby="emailHelp" placeholder="Monthly Housing Cost">
         <small id="income" class="form-text text-muted">Enter your monthly rent/mortgage.</small>
+        <p id="housingWarning" class="warningText"></p>
       </div>
       <div class="form-group">
         <label for="budget">Monthly Food Costs</label>
         <input type="currency" class="form-control" id="foodCosts" aria-describedby="emailHelp" placeholder="Monthly Food Costs">
         <small id="income" class="form-text text-muted">Enter your monthly food costs, including meals out.</small>
+        <p id="foodWarning" class="warningText"></p>
       </div>
       <div class="form-group">
         <label for="budget">Monthly Car Payment</label>
         <input type="currency" class="form-control" id="carCosts" aria-describedby="emailHelp" placeholder="Monthly Food Costs">
         <small id="income" class="form-text text-muted">Enter your monthly car payment.</small>
+        <p id="carWarning" class="warningText"></p>
       </div>
+      <button type="button" id="addCost" class="btn btn-secondary">+ Add Expense</button>
       <button type="button" class="btn btn-primary" id="calc">Calculate</button>
     </form>
 
-    <div class="total border mx-auto">
+    <div class="total border rounded mx-auto bg-light">
       <h3>Totals</h3>
       <h5>Your net monthly income is: </h5>
       <p id="netIncome"></p>
